@@ -1,0 +1,15 @@
+h1, h3 {
+  text-align: center;
+}
+#counter {
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  font-family: monospace;
+  text-align: center;
+  font-size: calc(100vw / .625 / 9);
+}
+.bottom {
+  position: fixed;
+  bottom: 0;
+}

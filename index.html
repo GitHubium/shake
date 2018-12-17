@@ -3,43 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <style>
-h1, h3 {
-  text-align: center;
-}
-#counter {
-  margin: 0;
-  padding: 0;
-  white-space: nowrap;
-  font-family: monospace;
-  text-align: center;
-  font-size: calc(100vw / .625 / 9);
-}
-.bottom {
-  position: fixed;
-  bottom: 0;
-}
-    </style>
-        <script type="text/javascript" src="https://cdn.rawgit.com/alexgibson/shake.js/master/shake.js"></script>
-    <script>
-//listen to shake event
-var count = 0;
-
-var shakeEvent = new Shake({threshold: 5, timeout:200});
-shakeEvent.start();
-window.addEventListener('shake', function(){
-    count ++;
-    document.getElementById("counter").innerHTML = count+" Shakes";
-}, false);
-
-//stop listening
-function stopShake(){
-    shakeEvent.stop();
-}
-
-//check if shake is supported or not.
-if(!("ondevicemotion" in window)){alert("Not Supported");}
-    </script>
+    <link rel='stylesheet' type='text/css' href='stylesheet.css'/>
+    <script type="text/javascript" src="https://cdn.rawgit.com/alexgibson/shake.js/master/shake.js"></script>
+    <script src="myScript.js"></script>
   </head>
   <body>
     <h1>Shake Your Phone!</h1>
