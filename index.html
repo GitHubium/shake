@@ -7,10 +7,13 @@
     <script type="text/javascript" src="https://cdn.rawgit.com/alexgibson/shake.js/master/shake.js"></script>
     <script>
 //listen to shake event
-var shakeEvent = new Shake({threshold: 15});
+var count = 0;
+
+var shakeEvent = new Shake({threshold: 10});
 shakeEvent.start();
 window.addEventListener('shake', function(){
-    alert("Shaked");
+    count ++;
+    document.getElementById("counter").innerHTML = count+" Shakes"
 }, false);
 
 //stop listening
@@ -23,7 +26,8 @@ if(!("ondevicemotion" in window)){alert("Not Supported");}
     </script>
   </head>
   <body>
-    <h1>Test</h1>
+    <h1>Shake Your Phone!</h1>
+    <h1 id="counter">0 Shakes<h1>
 
   </body>
 </html>
