@@ -3,6 +3,24 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+
+    <script type="text/javascript" src="https://cdn.rawgit.com/alexgibson/shake.js/master/shake.js"></script>
+    <script>
+//listen to shake event
+var shakeEvent = new Shake({threshold: 15});
+shakeEvent.start();
+window.addEventListener('shake', function(){
+    alert("Shaked");
+}, false);
+
+//stop listening
+function stopShake(){
+    shakeEvent.stop();
+}
+
+//check if shake is supported or not.
+if(!("ondevicemotion" in window)){alert("Not Supported");}
+    </script>
   </head>
   <body>
     <h1>Test</h1>
