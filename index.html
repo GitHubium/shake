@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title></title>
     <style>
-h1 {
+h1, h3 {
   text-align: center;
 }
 #counter {
@@ -14,6 +14,10 @@ h1 {
   font-family: monospace;
   text-align: center;
   font-size: calc(100vw / .625 / 9);
+}
+.bottom {
+  position: fixed;
+  bottom: 0;
 }
     </style>
         <script type="text/javascript" src="https://cdn.rawgit.com/alexgibson/shake.js/master/shake.js"></script>
@@ -39,7 +43,9 @@ if(!("ondevicemotion" in window)){alert("Not Supported");}
   </head>
   <body>
     <h1>Shake Your Phone!</h1>
-    <h1 id="counter">0 Shakes<h1>
+    <h1 id="counter">0 Shakes</h1>
+
+    <h3 class="bottom">Follow me on <a href="https://github.com/GitHubium" target="_blank">GitHub</a></h3>
 
   </body>
 </html>
