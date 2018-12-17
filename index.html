@@ -21,7 +21,7 @@ h1 {
 //listen to shake event
 var count = 0;
 
-var shakeEvent = new Shake({threshold: 5, timeout:0});
+var shakeEvent = new Shake({threshold: 5, timeout:200});
 shakeEvent.start();
 window.addEventListener('shake', function(){
     count ++;
