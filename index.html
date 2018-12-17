@@ -21,11 +21,11 @@ h1 {
 //listen to shake event
 var count = 0;
 
-var shakeEvent = new Shake({threshold: 1});
+var shakeEvent = new Shake({threshold: 5, timeout:0});
 shakeEvent.start();
 window.addEventListener('shake', function(){
     count ++;
-    document.getElementById("counter").innerHTML = count+" Shakes"
+    document.getElementById("counter").innerHTML = count+" Shakes";
 }, false);
 
 //stop listening
