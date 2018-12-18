@@ -1,17 +1,11 @@
 var rainbowColors;
-var myFont;
-var fontReady = false;
-
-function preLoad() {
-  myFont = loadFont("./fonts/AgentOrange.ttf");
-}
 
 function setup() {
 
   createCanvas(windowWidth, windowHeight);
   noStroke();
   angleMode("degrees");
-  textAlign(CENTER, CENTER);
+
   rainbowColors = [
     color(255, 0, 0),
     color(255, 255, 0),
@@ -48,13 +42,13 @@ function draw() {
 
   // Title
   fill(0);
-  textSize(width*0.1);
-  if (fontReady) {
-    textFont(myFont);
-  }
-  text("Shake Your Phone!", width*0.5, height*0.1);
+  textSize(min(40, width*0.1));
+  textFont("Comic Sans MS");
+  textAlign(CENTER, TOP);
+  text("Shake Your Phone!", width*0.5, 5);
 
   // Count
+  textAlign(CENTER, CENTER);
   textSize(width*0.4);
-  text(count, width*0.5, height*0.56);
+  text(count, width*0.5, height*0.5+width*0.05);
 }
