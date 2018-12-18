@@ -43,12 +43,16 @@ function draw() {
   // Title
   fill(0);
   textSize(min(40, width*0.1));
-  textFont("Comic Sans MS");
+  textFont("Sans-serif");
   textAlign(CENTER, TOP);
   text("Shake Your Phone!", width*0.5, 5);
 
   // Count
   textAlign(CENTER, CENTER);
-  textSize(width*0.4);
-  text(count, width*0.5, height*0.5+width*0.05);
+  fill(0);
+  for (var i = 0; i < 11; i ++) {
+    fill(i%2?255:0)
+    textSize(min(width,height)*(0.5+0.01*i));
+    text(count, width*0.5, height*0.5+width*0.05);
+  }
 }
