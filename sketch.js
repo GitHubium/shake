@@ -1,4 +1,10 @@
 var rainbowColors;
+var myFont;
+var fontReady = false;
+
+function preLoad() {
+  myFont = loadFont("./fonts/AgentOrange.ttf");
+}
 
 function setup() {
 
@@ -32,8 +38,8 @@ function draw() {
   // Fan blades
   fill(lerpColor(color(255), bgColor, 0.9));
   for (var i = 0; i < 10; i ++) {
-    var angle1 = i*36+frameCount/5;
-    var angle2 = i*36 + 18+frameCount/5;
+    var angle1 = i*36+millis()/100;
+    var angle2 = i*36 + 18+millis()/100;
 
     triangle(width/2, height/2,
        width/2+width*cos(angle1), height/2+width*sin(angle1),
@@ -43,7 +49,9 @@ function draw() {
   // Title
   fill(0);
   textSize(width*0.1);
-  textFont("Comic Sans MS");
+  if (fontReady) {
+    textFont(myFont);
+  }
   text("Shake Your Phone!", width*0.5, height*0.1);
 
   // Count
